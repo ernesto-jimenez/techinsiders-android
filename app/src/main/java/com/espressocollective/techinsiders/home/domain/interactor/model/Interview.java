@@ -6,11 +6,14 @@ import java.util.Date;
  *
  */
 public class Interview {
+    public final static Interview EMPTY = new Interview();
+
     private static final int SHORT_DESCRIPTION_SIZE = 100;
     private String title = "";
     private String urlAvatar = "";
     private String body = "";
     private Date date;
+    private String id = "";
 
     public Interview() {
     }
@@ -52,4 +55,13 @@ public class Interview {
                 .length();
         return body.substring(0, size);
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
 }

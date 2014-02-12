@@ -10,6 +10,7 @@ import java.util.List;
 public interface InterviewDataSource {
 
     List<Interview> getInterviews(int from, int to);
+    Interview getInterviewById(String id);
 
     boolean isComplete();
 }

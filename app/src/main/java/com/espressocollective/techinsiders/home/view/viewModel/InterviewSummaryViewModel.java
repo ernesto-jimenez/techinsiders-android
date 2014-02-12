@@ -8,12 +8,15 @@ public class InterviewSummaryViewModel {
     private String title;
     private String summary;
     private String date;
+    private String id;
 
-    public InterviewSummaryViewModel(String avatarUrl, String title, String summary, String date) {
+    public InterviewSummaryViewModel(String avatarUrl, String title, String summary, String date,
+                                     String id) {
         this.avatarUrl = avatarUrl;
         this.title = title;
         this.summary = summary;
         this.date = date;
+        this.id = id;
     }
 
     public String getAvatarUrl() {
@@ -30,5 +33,9 @@ public class InterviewSummaryViewModel {
 
     public String getDate() {
         return date;
+    }
+
+    public String getId() {
+        return id;
     }
 }

@@ -19,6 +19,7 @@ public class InterviewDataSourceFromApiWithCache implements InterviewDataSource 
 
     private final FeedApi feedApi;
     private final MapperFeedApi mapperFeedApi;
+    List<Interview> interviews = new ArrayList<Interview>();
 
     @Inject
     public InterviewDataSourceFromApiWithCache(FeedApi feedApi, MapperFeedApi mapperFeedApi) {
@@ -30,7 +31,11 @@ public class InterviewDataSourceFromApiWithCache implements InterviewDataSource 
     public List<Interview> getInterviews(int from, int to) {
 
         List<FeedInterview> feedInterviews = feedApi.getFeed(from, to);
-        List<Interview> interviews = new ArrayList<Interview>();
+
+        //this is temporal fix.
+        if(from == 0){
+            interviews.clear();
+        }
 
         for (FeedInterview feedInterview : feedInterviews) {
             Interview interview = mapperFeedApi.toInterview(feedInterview);
@@ -38,6 +43,16 @@ public class InterviewDataSourceFromApiWithCache implements InterviewDataSource 
         }
 
         return interviews;
+    }
+
+    @Override
+    public Interview getInterviewById(String id) {
+        for (Interview interview : interviews) {
+            if(interview.getId().equals(id)){
+                return interview;
+            }
+        }
+        return Interview.EMPTY;
     }
 
     @Override

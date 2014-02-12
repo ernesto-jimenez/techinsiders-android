@@ -11,6 +11,7 @@ public class FeedInterview {
     private String description;
     private String context;
     private Date date;
+    private String id;
 
     public void setTitle(String title) {
         this.title = title;
@@ -42,5 +43,13 @@ public class FeedInterview {
 
     public Date getDate() {
         return date;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
     }
 }

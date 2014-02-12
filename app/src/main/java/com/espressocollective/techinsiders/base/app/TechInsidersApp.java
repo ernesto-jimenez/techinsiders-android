@@ -10,6 +10,8 @@ import com.espressocollective.techinsiders.base.module.AndroidModule;
 import com.espressocollective.techinsiders.base.module.GlobalDomainModule;
 import com.espressocollective.techinsiders.base.module.GlobalModule;
 import com.espressocollective.techinsiders.base.module.GlobalViewModule;
+import com.espressocollective.techinsiders.details.domain.DetailDomainModule;
+import com.espressocollective.techinsiders.details.view.DetailViewModule;
 import com.espressocollective.techinsiders.home.datasource.HomeDataSourceModule;
 import com.espressocollective.techinsiders.home.domain.HomeDomainModule;
 import com.espressocollective.techinsiders.home.view.HomeViewModule;
@@ -32,7 +34,7 @@ public class TechInsidersApp extends Application {
     protected List<Object> getModules() {
         return Arrays.asList(new AndroidModule(this), new GlobalModule(), new GlobalDomainModule(),
                 new GlobalViewModule(), new HomeDataSourceModule(), new HomeDomainModule(),
-                new HomeViewModule());
+                new HomeViewModule(), new DetailViewModule(), new DetailDomainModule());
     }
 
     public void inject(Object object) {

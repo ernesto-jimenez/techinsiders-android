@@ -13,6 +13,7 @@ public class MapperFeedApi {
         interview.setDate(feedInterview.getDate());
         interview.setTitle(feedInterview.getTitle());
         interview.setUrlAvatar(null);
+        interview.setId(feedInterview.getId());
 
         return interview;
     }

@@ -13,7 +13,8 @@ public class InterviewSummaryMapper {
 
         InterviewSummaryViewModel summary = new InterviewSummaryViewModel(
                 interviewBasicInfoPojo.getAvatarUrl(),interviewBasicInfoPojo.getTitle(),
-                interviewBasicInfoPojo.getSmallDescription(), null);
+                interviewBasicInfoPojo.getSmallDescription(), null,
+                interviewBasicInfoPojo.getIdInterview());
 
         return summary;
     }
