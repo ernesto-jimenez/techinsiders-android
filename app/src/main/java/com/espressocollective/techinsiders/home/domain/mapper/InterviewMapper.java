@@ -15,7 +15,7 @@ public class InterviewMapper {
     }
 
     public FullInterviewPojo parseToFullInterview(Interview interview) {
-        FullInterviewPojo pojo = new FullInterviewPojo(interview.getBody());
+        FullInterviewPojo pojo = new FullInterviewPojo(interview.getTitle(), interview.getBody());
         return pojo;
     }
 }

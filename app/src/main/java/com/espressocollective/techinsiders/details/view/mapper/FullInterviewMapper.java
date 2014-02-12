@@ -10,7 +10,7 @@ public class FullInterviewMapper {
 
     public InterviewCompleteViewModel convert(FullInterviewPojo fullInterviewPojo) {
         InterviewCompleteViewModel interviewCompleteViewModel = new InterviewCompleteViewModel
-                (fullInterviewPojo.getBody());
+                (fullInterviewPojo.getTitle(), fullInterviewPojo.getBody());
 
         return interviewCompleteViewModel;
     }
