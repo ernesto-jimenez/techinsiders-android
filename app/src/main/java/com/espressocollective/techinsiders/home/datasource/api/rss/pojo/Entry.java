@@ -22,7 +22,6 @@ public class Entry {
     @Element
     private String summary;
 
-
     public String getId() {
         return id;
     }

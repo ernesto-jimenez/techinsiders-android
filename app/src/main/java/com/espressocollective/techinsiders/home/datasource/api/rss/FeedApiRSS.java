@@ -65,6 +65,7 @@ public class FeedApiRSS implements FeedApi {
             feedInterview.setDate(null);
             feedInterview.setId(entry.getId());
             feedInterview.setAvatar(entry.getLogo());
+            feedInterview.setUrl(entry.getId());
 
             allInterviews.add(feedInterview);
         }

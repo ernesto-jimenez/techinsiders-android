@@ -15,6 +15,7 @@ public class MapperFeedApi {
         interview.setTitle(feedInterview.getTitle());
         interview.setUrlAvatar(feedInterview.getAvatar());
         interview.setId(feedInterview.getId());
+        interview.setUrl(feedInterview.getUrl());
 
         return interview;
     }

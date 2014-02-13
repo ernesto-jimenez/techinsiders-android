@@ -13,6 +13,7 @@ public class FeedInterview {
     private Date date;
     private String id;
     private String avatar;
+    private String url;
 
     public void setTitle(String title) {
         this.title = title;
@@ -52,6 +53,14 @@ public class FeedInterview {
 
     public String getId() {
         return id;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public void setAvatar(String avatar) {

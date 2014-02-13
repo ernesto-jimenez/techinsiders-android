@@ -8,6 +8,7 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.espressocollective.techinsiders.R;
@@ -33,10 +34,7 @@ public class DetailFragment extends BaseFragment implements InterviewReadyListen
     DetailController controller;
 
     @InjectView(R.id.tv_body)
-    TextView body;
-
-    @InjectView(R.id.tv_title)
-    TextView title;
+    WebView body;
 
     private String interviewId;
 
@@ -90,8 +88,7 @@ public class DetailFragment extends BaseFragment implements InterviewReadyListen
 
     private void fillInterviewData() {
         InterviewCompleteViewModel interviewComplete = controller.getInterviewComplete();
-        title.setText(interviewComplete.getTitle());
-        body.setText(Html.fromHtml(interviewComplete.getBody()));
+        body.loadUrl(interviewComplete.getUrl());
     }
 
     @Override
