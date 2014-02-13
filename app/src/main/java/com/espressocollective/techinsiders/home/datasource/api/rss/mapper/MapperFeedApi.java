@@ -9,10 +9,11 @@ import com.espressocollective.techinsiders.home.domain.interactor.model.Intervie
 public class MapperFeedApi {
     public Interview toInterview(FeedInterview feedInterview) {
         Interview interview = new Interview();
-        interview.setBody(feedInterview.getDescription());
+        interview.setDescription(feedInterview.getDescription());
+        interview.setBody(feedInterview.getContent());
         interview.setDate(feedInterview.getDate());
         interview.setTitle(feedInterview.getTitle());
-        interview.setUrlAvatar(null);
+        interview.setUrlAvatar(feedInterview.getAvatar());
         interview.setId(feedInterview.getId());
 
         return interview;

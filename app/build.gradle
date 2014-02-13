@@ -33,7 +33,10 @@ dependencies {
     compile 'com.squareup.dagger:dagger:1.1.0'
     compile 'com.jakewharton:butterknife:4.0.+'
     compile 'com.path:android-priority-jobqueue:1.1'
-    compile ':rss-lib@aar'
-
-
+    compile('org.simpleframework:simple-xml:2.7.+') {
+        exclude module: 'stax'
+        exclude module: 'stax-api'
+        exclude module: 'xpp3'
+    }
+    compile 'com.squareup.okhttp:okhttp:1.2.+'
 }

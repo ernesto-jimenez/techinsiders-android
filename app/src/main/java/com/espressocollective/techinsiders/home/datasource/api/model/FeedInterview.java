@@ -9,9 +9,10 @@ public class FeedInterview {
     public final static FeedInterview EMPTY = new FeedInterview();
     private String title;
     private String description;
-    private String context;
+    private String content;
     private Date date;
     private String id;
+    private String avatar;
 
     public void setTitle(String title) {
         this.title = title;
@@ -29,12 +30,12 @@ public class FeedInterview {
         return description;
     }
 
-    public void setContext(String context) {
-        this.context = context;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getContext() {
-        return context;
+    public String getContent() {
+        return content;
     }
 
     public void setDate(Date date) {
@@ -51,5 +52,13 @@ public class FeedInterview {
 
     public String getId() {
         return id;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getAvatar() {
+        return avatar;
     }
 }

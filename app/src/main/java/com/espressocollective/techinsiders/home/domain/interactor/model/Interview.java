@@ -14,6 +14,7 @@ public class Interview {
     private String body = "";
     private Date date;
     private String id = "";
+    private String description;
 
     public Interview() {
     }
@@ -51,9 +52,9 @@ public class Interview {
     }
 
     public String getShortDescription() {
-        int size = (body.length() > SHORT_DESCRIPTION_SIZE) ? SHORT_DESCRIPTION_SIZE : body
-                .length();
-        return body.substring(0, size);
+        int size = (description.length() > SHORT_DESCRIPTION_SIZE) ? SHORT_DESCRIPTION_SIZE
+                : description.length();
+        return description.substring(0, size);
     }
 
     public String getId() {
@@ -64,4 +65,11 @@ public class Interview {
         this.id = id;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }
