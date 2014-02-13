@@ -35,6 +35,9 @@ public class DetailFragment extends BaseFragment implements InterviewReadyListen
     @InjectView(R.id.tv_body)
     TextView body;
 
+    @InjectView(R.id.tv_title)
+    TextView title;
+
     private String interviewId;
 
 
@@ -87,6 +90,7 @@ public class DetailFragment extends BaseFragment implements InterviewReadyListen
 
     private void fillInterviewData() {
         InterviewCompleteViewModel interviewComplete = controller.getInterviewComplete();
+        title.setText(interviewComplete.getTitle());
         body.setText(Html.fromHtml(interviewComplete.getBody()));
     }
 
