@@ -9,8 +9,10 @@ import com.espressocollective.techinsiders.details.view.viewModel.InterviewCompl
 public class FullInterviewMapper {
 
     public InterviewCompleteViewModel convert(FullInterviewPojo fullInterviewPojo) {
-        InterviewCompleteViewModel interviewCompleteViewModel = new InterviewCompleteViewModel
-                (fullInterviewPojo.getBody());
+        InterviewCompleteViewModel interviewCompleteViewModel = new InterviewCompleteViewModel(
+                fullInterviewPojo.getTitle(),
+                fullInterviewPojo.getBody(),
+                fullInterviewPojo.getUrl());
 
         return interviewCompleteViewModel;
     }

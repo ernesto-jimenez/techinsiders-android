@@ -15,6 +15,7 @@ public class Interview {
     private Date date;
     private String id = "";
     private String description;
+    private String url = "";
 
     public Interview() {
     }
@@ -71,5 +72,13 @@ public class Interview {
 
     public String getDescription() {
         return description;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }
